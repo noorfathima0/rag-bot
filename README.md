@@ -28,20 +28,6 @@
 
 ---
 
-## 🚀 Live Architecture Overview
-
-```mermaid
-graph LR
-A[User] --> B[Streamlit Chat UI]
-B --> C[FastAPI Backend]
-C --> D[Pathway Pipeline]
-C --> E[Vector Search]
-C --> F[Ollama (local LLM)]
-D --> G[Exa API (Live News)]
-```
-
----
-
 ## 📦 Clone & Setup
 
 ### 🔧 Prerequisites
