@@ -1,0 +1,31 @@
+services:
+  rag-bot:
+    build: .
+    container_name: rag-bot
+    depends_on:
+      - ollama
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      - OLLAMA_URL=http://ollama:11434
+    networks:
+      - rag-net
+
+  ollama:
+    image: ollama/ollama
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-data:/root/.ollama
+    networks:
+      - rag-net
+    restart: unless-stopped
+
+volumes:
+  ollama-data:
+
+networks:
+  rag-net:

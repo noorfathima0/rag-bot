@@ -1,0 +1,10 @@
+pathway
+sentence-transformers
+numpy
+httpx
+requests
+python-dotenv
+fastapi
+uvicorn
+streamlit
+requests
